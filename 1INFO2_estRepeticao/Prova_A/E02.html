@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<script>
+    //Problema: Abastecer
+    /*
+    Um posto de combustível possui apenas 400 litros de gasolina para realizar o abastecimento do veículo dos seus clientes.
+    Para cada veículo que for realizar o abastecimento, registre quantos litros de gasolina foram solicitados pelo proprietário.
+    Apresente, ao final do programa, em quantos veículos foi possível realizar o abastecimento.
+    */
+
+    //Entrada
+    let abastecimento = 400;
+    let carros = 0;
+
+    //Processamento
+    for(carros = 0; 0 < abastecimento; carros++){
+        const litros = Number(prompt("Informe quantos litros quer abastecer: "));
+        abastecimento = abastecimento - litros;
+    }
+    //Saída
+    document.write(`Foi possível abastacer ${carros} carros com apenas 400 litros de gasolina`);
+   
+</script>

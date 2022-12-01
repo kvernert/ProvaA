@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+<script>
+    //Problema: Eleição
+    /*
+    Considere que, em uma eleição do Grêmio Estudantil de uma Instituição de Ensino, um representante de cada uma das 15 turmas é quem votará nas chapas que estão fazendo campanha.
+    Pergunte, para cada eleitor, qual chapa que confiará o seu voto (Chapa 1 ou Chapa 2).
+    Contabilize e apresente, ao fim do programa, qual foi a chapa ganhadora e qual a porcentagem de votos que a chapa recebeu.
+    */
+
+    //Entrada
+    const quantidadeVotantes = Number(prompt("Informe a quantidade de votantes: "));
+    let voto1 = 0;
+    let voto2 = 0;
+
+
+    //Processamento
+    for(let contador = 1; contador <= quantidadeVotantes; contador++){
+        const voto = Number(prompt("Informe em qual chapa quer votar para: Chapa 1-1| Chapa 2-2: "));
+        if(voto === 1){
+            voto1++
+        }
+        if(voto === 2){
+            voto2++
+        }
+    }
+    let media1 = voto1/quantidadeVotantes;
+    let media2 = voto2/quantidadeVotantes;
+
+    //Saída
+    if(voto1 > voto2){
+        document.write(`A Chapa 1 ganhou</br>`);
+        document.write(`Receberam ${voto1} votos </br>`);
+        document.write(`A procentagem de votos que a chapa recebeu foi: ${media1}%`);
+    }
+    else if(voto1 === voto2){
+        document.write(`As duas chapas receberam o mesmo número de votos`);
+    }
+    else{
+        if(voto1 < voto2){
+        document.write(`A Chapa 2 ganhou</br>`);
+        document.write(`Receberam ${voto2} votos </br>`);
+        document.write(`A procentagem de votos que a chapa recebeu foi: ${media2}%`);
+    }
+    }
+    
+
+</script>
